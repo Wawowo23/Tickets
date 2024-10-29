@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class PracticaTicketsPrueba {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String opcionInicio, opcionMenuUsuario;
+
+        System.out.print("""
+                
+                ░█▀▀█ ▀█▀ ░█▀▀▀ ░█▄─░█ ░█──░█ ░█▀▀▀ ░█▄─░█ ▀█▀ ░█▀▀▄ ░█▀▀▀█ 　 ─█▀▀█\s
+                ░█▀▀▄ ░█─ ░█▀▀▀ ░█░█░█ ─░█░█─ ░█▀▀▀ ░█░█░█ ░█─ ░█─░█ ░█──░█ 　 ░█▄▄█\s
+                ░█▄▄█ ▄█▄ ░█▄▄▄ ░█──▀█ ──▀▄▀─ ░█▄▄▄ ░█──▀█ ▄█▄ ░█▄▄▀ ░█▄▄▄█ 　 ░█─░█\s
+                
+                ░█▀▀█ ─█▀▀█ ░█─── ░█▀▀█ ░█▀▀▀█ ░█▄─░█ 　 ▀▀█▀▀ ▀█▀ ░█▀▀█ ░█─▄▀ ░█▀▀▀ ▀▀█▀▀ ░█▀▀▀█\s
+                ░█▀▀▄ ░█▄▄█ ░█─── ░█▀▀▄ ░█──░█ ░█░█░█ 　 ─░█── ░█─ ░█─── ░█▀▄─ ░█▀▀▀ ─░█── ─▀▀▀▄▄\s
+                ░█▄▄█ ░█─░█ ░█▄▄█ ░█▄▄█ ░█▄▄▄█ ░█──▀█ 　 ─░█── ▄█▄ ░█▄▄█ ░█─░█ ░█▄▄▄ ─░█── ░█▄▄▄█\n\n""");
+
+
+        System.out.print("""
+                ************************************
+                *  PULSA UNA TECLA PARA CONTINUAR  *
+                ************************************
+                \n""");
+        scanner.nextLine();
+
+
+        System.out.print("""
+                *******************************************************************
+                *                        MENÚ DE ACCESO                           *
+                *******************************************************************
+                 1. - ACCESO AL MENÚ DE ENTRADAS
+                 2. - ACCESO AL MENÚ DE ADMINISTRADOR (SOLO PARA ADMINISTRADORES)
+                Introduce la opción que deseas hacer:\s
+                """);
+        opcionInicio = scanner.nextLine();
+
+        switch (opcionInicio) {
+            case "1":
+
+            do {
+                System.out.print("""
+                        *************
+                        *          MENÚ DE ENTRADAS           *
+                        ***************************************
+                        * a. Vender entradas para un evento   *
+                        * b. Consultar el estado de un evento *
+                        * c. Salir                            *
+                        ***************************************
+                        """);
+
+                System.out.println("Introduce la opción que deseas hacer: ");
+                opcionMenuUsuario = scanner.nextLine();
+
+                switch (opcionMenuUsuario) {
+                    case "a":
+                        break;
+                    case "b":
+                        break;
+                    case "c":
+                        System.out.println("Saliendo del menú");
+                        break;
+                    default:
+                        System.out.println("Opción seleccionada no válida\n");
+                        break;
+                }
+
+            } while (!opcionMenuUsuario.equals("c"));
+
+            break;
+
+            case "2":
+                break;
+
+            default:
+                break;
+        }
+
+
+    }
+}
